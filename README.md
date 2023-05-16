@@ -4,7 +4,6 @@
 DNS dinamico no IP, script a ser adicionado no DNU/LINUX no /etc/init.d
 
 - Requer instalacao e configuracao do client NOIP2
-- 
 
 ## Instalação no-ip Linux
 
@@ -25,3 +24,9 @@ DNS dinamico no IP, script a ser adicionado no DNU/LINUX no /etc/init.d
 
 O sistema informará caso você possua mais de um hostname. Tecle “n” para que o instalador permita escolher entre os hostnames cadastrados. Tecle “y” (sim) ou “n” (não) para definir o hostname que deseja utilizar nesta instalação. Defina o tempo de atualização do DDNS (entre 1 e 30 minutos). Então, tecle “y” para executar um update padrão e, por fim, tecle Enter para criar um arquivo de configuração.
 
+---
+Feitos os procedimentos, adicionar no crontab a execução do script conforme demanda
+Exemplo ultima linha do crontab
+
+``` 0 * * * * root bash /etc/init.d/noip2 
+#executa a cada hora a atualização ```
